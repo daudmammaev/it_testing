@@ -4,12 +4,10 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Введите размер массива n: ");
-        int n = scanner.nextInt();
-        System.out.print("Введите шаг m: ");
-        int m = scanner.nextInt();
+
+        int n = Integer.parseInt(args[0]);
+        int m = Integer.parseInt(args[1]);
 
         int[] circularArray = new int[n];
         for (int i = 0; i < n; i++) {
@@ -23,7 +21,5 @@ public class Main {
             currentIndex = (currentIndex + m - 1) % n;
         } while (currentIndex != 0);
         System.out.println("Путь: " + path.toString().trim());
-
-        scanner.close();
     }
 }

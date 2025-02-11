@@ -12,7 +12,7 @@ public class Main {
             System.out.println("укажите путь к файлу в качестве аргумента командной строки.");
             return;
         }
-        String filePath = args[0];
+        String filePath = args[0]; // numbers.txt
         List<Integer> nums = new ArrayList<>();
 
         try (BufferedReader br = new BufferedReader(new FileReader(filePath))) {
